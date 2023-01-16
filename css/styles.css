@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
 }
 
 
@@ -10,14 +11,26 @@
 header {
     background-color: #ff900e1a;
     padding: 50px 230px 0px 230px;
-    width: 100%;
-    height: 100vh;
+    width: 100vw;
+    height: 120vh;
+}
+
+header h1,
+p,
+input {
+    margin-bottom: 20px;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 30px;
+}
+
+.brand {
+    font-size: 1.5em;
+    font-weight: 700;
 }
 
 .navigation {
@@ -26,10 +39,30 @@ nav {
     align-items: center;
 }
 
-.header-title {}
+.header-title {
+    text-align: center;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.header-title p {
+    color: #727272;
+}
 
 .header-image img {
     width: 100%;
+    height: auto;
+}
+
+.btn-primary {
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    border: 0;
+    background-color: orange;
+    padding: 15px 20px;
+    border-radius: 5px;
+    width: 150px;
 }
 
 
@@ -37,11 +70,12 @@ nav {
 
 main {
     padding: 50px 230px 0px 230px;
+    margin-bottom: 50px;
 }
 
 .features-container-one {
     display: flex;
-    height: 50vh;
+    height: 60vh;
     width: 100%;
     gap: 50px;
     margin-bottom: 30px;
@@ -53,17 +87,206 @@ main {
     justify-content: center;
 }
 
-.features-image {
+.features-title h3 {
+    font-size: 2em;
+}
+
+.team-image {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     width: 100%;
 }
 
-.features-image img {
+.team-image img {
     width: 100%;
 }
 
 .features-container-two {
+    display: flex;
+    gap: 50px;
+    width: 100%;
+    height: 100vh;
+    margin: 100px 0;
+}
 
+.features-content h4 {
+    margin-bottom: 20px;
+}
+
+.features-headline {
+    border-left: 5px solid orange;
+    font-weight: 700;
+    padding-left: 25px;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.features-content {
+    padding: 20px;
+    box-shadow: 4px 4px 20px 0px #b7b7b73d;
+    margin-bottom: 30px;
+}
+
+.features-image {
+    position: relative;
+}
+
+.features-image img {
+    height: 100%;
+}
+
+.btn-features {
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    height: 90px;
+}
+
+
+/* facts section styles */
+
+.facts {
+    margin-bottom: 100px;
+}
+
+.facts-content {
+    width: 50%;
+}
+
+.facts-content h3,
+p {
+    margin-bottom: 20px;
+}
+
+.facts-container {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.facts-box {
+    border: 1px solid orange;
+    border-radius: 5px;
+    width: 150px;
+    padding: 30px;
+    transition: transform 0.4s ease-in;
+}
+
+.facts-box:hover {
+    transform: scale(1.1);
+    border: 1px dashed orangered;
+}
+
+
+/* sponsors section styles */
+
+.sponsors-content {
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.sponsors-brand {
+    display: flex;
+    justify-content: space-between;
+    -webkit-filter: grayscale(100%);
+}
+
+
+/* footer styles starts here */
+
+.footer {
+    background-color: whitesmoke;
+    color: black;
+    padding-bottom: 70px;
+}
+
+.footer-container {
+    display: flex;
+    gap: 330px;
+    padding: 130px 230px;
+}
+
+.footer-title {
+    font-weight: 700;
+    font-size: 45px;
+    margin-bottom: 16px;
+}
+
+.footer-description {
+    margin-bottom: 24px;
+}
+
+.social-media {
+    display: flex;
+    gap: 10px;
+}
+
+.subscribe h3 {
+    font-weight: 600;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.subscribe input {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 250px;
+    background-color: #a3a2a2;
+    outline: none;
+    color: black;
+    border: 1px solid rgb(5, 5, 5);
+}
+
+.subscribe button {
+    border-radius: 10px;
+    padding: 15px 36px;
+    color: #f15b22;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.copyright {
+    text-align: center;
+    background-color: #fff4e7;
+    color: black;
+    padding: 20px 0;
+    margin: 20px 230px;
+    border-radius: 10px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+
+/* Responsive styles */
+
+@media only screen and (max-width: 576px) {
+    header {
+        background-color: #ff900e1a;
+        padding: 0;
+        width: 100%;
+    }
+    .header-image img {
+        width: 400px;
+        height: auto;
+    }
+    .features-container-two {
+        display: flex;
+        flex-direction: column;
+    }
+    .team-image {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+        width: 100%;
+    }
+    .features-container-one {
+        display: flex;
+        flex-direction: column;
+        height: 60vh;
+        width: 100%;
+        gap: 50px;
+        margin-bottom: 30px;
+    }
 }
